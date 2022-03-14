@@ -1,3 +1,5 @@
+#' Plot Function Kmeans
+#' 
 #' This function plots the clusters from the output of the other function 
 #' 
 #' Plotting the clusters and the centers

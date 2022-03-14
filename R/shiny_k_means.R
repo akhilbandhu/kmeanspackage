@@ -1,10 +1,13 @@
-#' This function plots the clusters from the output of the other function 
+#' Shiny K means function
 #' 
-#' Plotting the clusters and the centers
+#' This function will create the shiny app for the kmeans package.
+#' The appdir object basically looks for the shiny folder in the kmeans 
+#' package and runs the ui and server functions.
 #'
-#' @param selectedData The data from which the clusters and centers are going to be generated
-#' @param clusters The clusters calculated from the kmeans function 
-#'
+#' The ui.R file will create the ui for the application.
+#' The server.R will set up the server.
+#' The app.R function sources both the ui and server functions. 
+#' 
 #' @export
 #' 
 

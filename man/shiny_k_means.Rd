@@ -2,15 +2,17 @@
 % Please edit documentation in R/shiny_k_means.R
 \name{shiny_k_means}
 \alias{shiny_k_means}
-\title{This function plots the clusters from the output of the other function}
+\title{Shiny K means function}
 \usage{
 shiny_k_means()
 }
-\arguments{
-\item{selectedData}{The data from which the clusters and centers are going to be generated}
-
-\item{clusters}{The clusters calculated from the kmeans function}
-}
 \description{
-Plotting the clusters and the centers
+This function will create the shiny app for the kmeans package.
+The appdir object basically looks for the shiny folder in the kmeans
+package and runs the ui and server functions.
+}
+\details{
+The ui.R file will create the ui for the application.
+The server.R will set up the server.
+The app.R function sources both the ui and server functions.
 }

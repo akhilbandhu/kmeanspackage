@@ -2,7 +2,7 @@
 % Please edit documentation in R/plot_function.R
 \name{plot_function}
 \alias{plot_function}
-\title{This function plots the clusters from the output of the other function}
+\title{Plot Function Kmeans}
 \usage{
 plot_function(selectedDate, clusters)
 }
@@ -12,5 +12,8 @@ plot_function(selectedDate, clusters)
 \item{selectedData}{The data from which the clusters and centers are going to be generated}
 }
 \description{
+This function plots the clusters from the output of the other function
+}
+\details{
 Plotting the clusters and the centers
 }

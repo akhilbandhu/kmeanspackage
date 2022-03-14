@@ -2,8 +2,7 @@
 % Please edit documentation in R/kmeans_function.R
 \name{kmeans_function}
 \alias{kmeans_function}
-\title{This function calculates the clusters from the given input
-It is basically a wrapper around the kmeans function itself}
+\title{K Means Function}
 \usage{
 kmeans_function(selectedData, clusters)
 }

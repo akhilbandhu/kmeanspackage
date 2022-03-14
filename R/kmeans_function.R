@@ -1,3 +1,5 @@
+#' K Means Function 
+#' 
 #' This function calculates the clusters from the given input
 #' It is basically a wrapper around the kmeans function itself
 #' 
