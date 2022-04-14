@@ -1,21 +1,54 @@
 ui <- fluidPage(
   
   # Put a titlePanel here
-  titlePanel("k-means clustering"),
+  titlePanel("Unsupervised Learning"),
   
-  sidebarLayout(
-    # Sidebar. Put your inputs inside the sidebarPanel
-    sidebarPanel(
-      selectInput('xcol', 'X Variable', names(iris)),
-      selectInput('ycol', 'Y Variable', names(iris),
-                  selected=names(iris)[[2]]),
-      numericInput('clusters', 'Cluster count', 3,
-                   min = 1, max = 9)
-    ),
-    
-    # Main panel. put your output plot here
-    mainPanel(
-      plotOutput('plot1')
+  mainPanel(
+    tabsetPanel(type = "tabs",
+                tabPanel("K-means Clustering",
+                         sidebarPanel(
+                           checkboxGroupInput("variable_kmeans", "Variables to show:",
+                                              c("Sepal Length" = "Sepal.Length",
+                                                "Sepal Width" = "Sepal.Width",
+                                                "Petal Length" = "Petal.Length",
+                                                "Petal Width" = "Petal.Width")),
+                           numericInput('clusters', 'Cluster count', 3,
+                                        min = 1, max = 15)
+                         ),
+                         # Main panel. put your output plot here
+                         mainPanel(
+                           plotOutput('plot1')
+                         )
+                ),
+                tabPanel("K-Nearest Neigbors",
+                         
+                        ),
+                tabPanel("PCA",
+                         sidebarPanel(
+                           checkboxGroupInput("variable_pca", "Variables to show:",
+                                              c("Sepal Length" = "Sepal.Length",
+                                                "Sepal Width" = "Sepal.Width",
+                                                "Petal Length" = "Petal.Length",
+                                                "Petal Width" = "Petal.Width"))
+                         ),
+                         # Main panel. put your output plot here
+                         mainPanel(
+                           plotOutput('plot2')
+                         )
+                        ),
+                tabPanel("UMAP",
+                         sidebarPanel(
+                           checkboxGroupInput("variable_umap", "Variables to show:",
+                                              c("Sepal Length" = "Sepal.Length",
+                                                "Sepal Width" = "Sepal.Width",
+                                                "Petal Length" = "Petal.Length",
+                                                "Petal Width" = "Petal.Width"))
+                         ),
+                         # Main panel. put your output plot here
+                         mainPanel(
+                           plotOutput('plot3')
+                         )
+                         )
     )
   )
 )
